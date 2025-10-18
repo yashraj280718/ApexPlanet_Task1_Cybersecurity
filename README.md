@@ -26,8 +26,8 @@ This repository contains all deliverables, documentation, and resources for Task
 ---
 
 ### 🗂️ Repository Structure
-
-ApexPlanet-Task1-Cybersecurity-Foundations/
+```bash
+ApexPlanet-Task1-Cybersecurity-Foundations/ 
 │
 ├── README.md
 ├── LICENSE
@@ -81,7 +81,7 @@ ApexPlanet-Task1-Cybersecurity-Foundations/
     ├── task1-report.pdf
     ├── learning-outcomes.md
     └── references.md
-
+```
 
 ---
 
