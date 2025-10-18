@@ -3,8 +3,11 @@
 # **ApexPlanet Cybersecurity & Ethical Hacking Internship**  
 ## **Task 1: Foundations of Cybersecurity (Days 1–12)**  
 
+---
 **Intern:** Yashraj Giri Goswami
+
 **Organization:** ApexPlanet Software Pvt. Ltd.  
+
 **Duration:** 1 Sept, 2025 – 29 Oct, 2025
 
 ---
