@@ -1,4 +1,4 @@
-# Task 1 Learning Outcomes
+# Learning Outcomes
 
 This document summarizes the key skills, knowledge, and competencies acquired during **Task 1 (Days 1–12)** of the **ApexPlanet Cybersecurity & Ethical Hacking Internship**.
 
