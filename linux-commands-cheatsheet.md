@@ -1,4 +1,4 @@
-# Linux Commands Cheat Sheet for Task 1
+# Linux Commands Cheat Sheet 
 
 This cheat sheet covers the **foundational Linux commands** you learned during Task 1 (Days 1–12) of the ApexPlanet internship. Use it as a quick reference for file navigation, permissions, package management, networking basics, cryptography exercises, and tool usage.
 
