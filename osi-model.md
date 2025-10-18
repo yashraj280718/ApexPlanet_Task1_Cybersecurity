@@ -1,4 +1,4 @@
-# OSI Model - Complete Notes
+# OSI Model
 
 This document provides a comprehensive overview of the **OSI (Open Systems Interconnection) Model**, its seven layers, and real-world examples for each layer. Use this as part of your Task 1 documentation for networking fundamentals.
 
