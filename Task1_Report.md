@@ -1,7 +1,7 @@
-# Cover Page
 
-**ApexPlanet Cybersecurity & Ethical Hacking Internship**  
-**Task 1: Foundations of Cybersecurity (Days 1–12)**  
+
+# **ApexPlanet Cybersecurity & Ethical Hacking Internship**  
+## **Task 1: Foundations of Cybersecurity (Days 1–12)**  
 
 **Intern:** Yashraj Giri Goswami
 **Organization:** ApexPlanet Software Pvt. Ltd.  
