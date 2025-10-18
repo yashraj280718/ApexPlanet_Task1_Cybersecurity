@@ -83,5 +83,3 @@ This cheat sheet covers the **foundational Linux commands** you learned during T
 | **netcat (nc)**                  | TCP/UDP connectivity and backdoors           | `nc -lvp 4444`                       |
 
 ---
-
-*Cheat sheet prepared for Task 1 deliverables.*
