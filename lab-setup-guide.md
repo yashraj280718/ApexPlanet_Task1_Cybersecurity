@@ -46,7 +46,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 5. **Save and Exit** (usually F10)
 6. **Restart your computer**
 
-**Screenshot Reference:** [`screenshots/virtualization-enabled.jpg`](https://github.com/yashraj280718/ApexPlanet_Task1_Cybersecurity/blob/8b59d7bac1aad075a349b397f39e5b0a82f355a2/virtualization-enabled.jpg)
+**Screenshot Reference:** virtualization-enabled.jpg
 
 ***
 
