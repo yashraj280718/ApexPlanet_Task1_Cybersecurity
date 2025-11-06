@@ -862,6 +862,9 @@ The OSI Model is a conceptual framework used to understand network interactions 
 
 ---
 
+<img width="1800" height="1798" alt="Image" src="https://github.com/user-attachments/assets/7f646511-518b-4253-b39b-f651acd03fa1" />
+
+---
 ## 1. Layer 7: Application Layer
 
 - **Purpose:** Provides network services directly to user applications.
@@ -871,6 +874,8 @@ The OSI Model is a conceptual framework used to understand network interactions 
   - Web browsers (Chrome, Firefox) using HTTP/HTTPS.
   - Email clients (Outlook, Thunderbird) using SMTP/IMAP/POP3.
   - DNS resolution via domain lookup.
+
+<img width="318" height="159" alt="Image" src="https://github.com/user-attachments/assets/b5036bf0-22be-472e-a143-2150fff1abf2" />
 
 ---
 
@@ -883,6 +888,8 @@ The OSI Model is a conceptual framework used to understand network interactions 
   - JPEG, GIF image compression.
   - Data serialization formats like JSON, XML.
 
+<img width="317" height="159" alt="Image" src="https://github.com/user-attachments/assets/6bad1612-e317-4e54-9083-5251d40b4cba" />
+
 ---
 
 ## 3. Layer 5: Session Layer
@@ -893,6 +900,8 @@ The OSI Model is a conceptual framework used to understand network interactions 
   - TCP session management (establishing and tearing down connections).
   - NetBIOS sessions in Windows networks.
   - SSH session management.
+
+![Image](https://github.com/user-attachments/assets/26dc1ee9-e97e-43cd-93e4-6fc5deabe77c)
 
 ---
 
@@ -906,6 +915,8 @@ The OSI Model is a conceptual framework used to understand network interactions 
   - UDP streaming for VoIP and video conferencing.
   - Retransmission of lost segments in FTP transfers.
 
+<img width="354" height="142" alt="Image" src="https://github.com/user-attachments/assets/f8872b32-cf7b-4c07-b30b-df8eeae11467" />
+
 ---
 
 ## 5. Layer 3: Network Layer
@@ -917,6 +928,8 @@ The OSI Model is a conceptual framework used to understand network interactions 
   - IPv4 and IPv6 addressing and routing.
   - ICMP ping and traceroute utilities.
   - Dynamic routing protocols in routers (OSPF, BGP).
+
+<img width="320" height="157" alt="Image" src="https://github.com/user-attachments/assets/7d17ba5b-7c90-4404-8747-e5589a01d160" />
 
 ---
 
@@ -930,6 +943,10 @@ The OSI Model is a conceptual framework used to understand network interactions 
   - Switch operations using MAC address tables.
   - PPP and HDLC in WAN connections.
 
+<img width="399" height="126" alt="Image" src="https://github.com/user-attachments/assets/cdfc626b-486b-4b00-ba16-3661ddbfb04d" />
+
+<img width="300" height="168" alt="Image" src="https://github.com/user-attachments/assets/06adc367-40a1-406b-babe-9236f89f50bd" />
+
 ---
 
 ## 7. Layer 1: Physical Layer
@@ -940,6 +957,8 @@ The OSI Model is a conceptual framework used to understand network interactions 
   - Ethernet cables (Cat5e, Cat6) and connectors (RJ45).
   - Fiber optic transmission.
   - Wireless transmission (Wi-Fi, Bluetooth) radio frequencies.
+
+<img width="259" height="194" alt="Image" src="https://github.com/user-attachments/assets/83f83f9d-8f54-495b-95a1-a59c9b96ffb7" />
 
 ---
 
@@ -1420,6 +1439,3 @@ This document summarizes the key skills, knowledge, and competencies acquired du
 - **Netcat**: Performed TCP/UDP connections, banner grabbing, and simple backdoor setups.
 
 ---
-
-
-*End of Report*
