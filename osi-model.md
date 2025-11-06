@@ -20,6 +20,9 @@ The OSI Model is a conceptual framework used to understand network interactions 
 
 ---
 
+<img width="1800" height="1798" alt="Image" src="https://github.com/user-attachments/assets/44f7aa0a-8178-4c32-a00e-4dbd88800300" />
+
+---
 ## 1. Layer 7: Application Layer
 
 - **Purpose:** Provides network services directly to user applications.
