@@ -67,7 +67,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
    - **Windows**: `VMware-workstation-full-xx.x.x-xxxxxxx.exe`
    - **Linux**: `VMware-Workstation-Full-xx.x.x-xxxxxxx.bundle`
 
-**Screenshot Reference:** `screenshots/vmware-download-page.png`
+![Image](https://github.com/user-attachments/assets/5dc04505-d0fc-4612-ba4a-4c6bf73ecd1b)
 
 ***
 
@@ -119,8 +119,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
    - Click **Finish**
    - You may need to **restart your computer**
 
-**Screenshot Reference:** `screenshots/vmware-installation-complete.png`
-
+![Image](https://github.com/user-attachments/assets/44d73309-17a9-4313-a57b-0a243349848b)
 ***
 
 ### First Launch and License Activation
@@ -136,7 +135,6 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 
 3. VMware Workstation Pro is now ready to use
 
-**Screenshot Reference:** `screenshots/vmware-first-launch.png`
 
 ***
 
@@ -177,7 +175,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
    - Select the ISO file
    - Click **Next**
 
-**Screenshot Reference:** `screenshots/kali-vm-iso-selection.png`
+![Image](https://github.com/user-attachments/assets/c5c659d8-8c0c-4172-8274-d2c74b114580)
 
 6. **Guest Operating System:**
    - Select **"Linux"**
@@ -300,7 +298,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
     - Password: Your password
     - Press **Enter**
 
-**Screenshot Reference:** `screenshots/kali-desktop.png`
+![Image](https://github.com/user-attachments/assets/352a44c9-4580-4163-85ca-231f01a36faf)
 
 ***
 
