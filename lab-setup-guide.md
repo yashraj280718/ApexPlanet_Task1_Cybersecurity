@@ -46,7 +46,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 5. **Save and Exit** (usually F10)
 6. **Restart your computer**
 
-!(https://github.com/user-attachments/assets/7d30f33d-bb2e-4ef0-ade5-e48e94b1fdb2)
+![screenshot] (https://github.com/user-attachments/assets/7d30f33d-bb2e-4ef0-ade5-e48e94b1fdb2)
 
 ***
 
