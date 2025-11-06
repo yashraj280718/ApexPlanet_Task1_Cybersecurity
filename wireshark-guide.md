@@ -48,6 +48,8 @@ wireshark
 ```
 Or find it in Applications → Sniffing & Spoofing → Wireshark
 
+<img width="1677" height="815" alt="image" src="https://github.com/user-attachments/assets/313f2c14-66e5-4fd1-88dd-08a2bd72326a" />
+
 ---
 
 ## Basic Usage
@@ -70,6 +72,8 @@ When you launch Wireshark, you'll see a list of available network interfaces:
 - Or go to **Capture → Start**
 
 Wireshark will immediately begin capturing all packets on the selected interface.
+
+<img width="1919" height="879" alt="image" src="https://github.com/user-attachments/assets/76826f89-4bd8-4274-8bab-eccf53abcf2c" />
 
 ### 3. Apply Filters
 
@@ -238,7 +242,7 @@ Extract files transferred over HTTP, SMB, or other protocols:
 
 **Examples:**
 ```
-host 192.168.1.1                          # Capture traffic to/from specific host
+host 10.10.169.194                        # Capture traffic to/from specific host
 port 80                                   # Capture only port 80 traffic
 tcp                                       # Capture only TCP packets
 not broadcast and not multicast           # Exclude broadcast/multicast traffic
