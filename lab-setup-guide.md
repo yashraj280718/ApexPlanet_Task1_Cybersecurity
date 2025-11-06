@@ -721,29 +721,3 @@ Then reinstall VMware
    - Add folder path
 
 ***
-
-### Screenshot Checklist
-
-Ensure you have captured and saved these screenshots in the `screenshots/` folder:
-
-- [ ] `bios-virtualization-enabled.png`
-- [ ] `vmware-download-page.png`
-- [ ] `vmware-installation-complete.png`
-- [ ] `vmware-first-launch.png`
-- [ ] `kali-iso-download.png`
-- [ ] `kali-vm-iso-selection.png`
-- [ ] `kali-vm-created.png`
-- [ ] `kali-boot-menu.png`
-- [ ] `kali-desktop.png`
-- [ ] `kali-system-update.png`
-- [ ] `metasploitable2-extracted-files.png`
-- [ ] `metasploitable2-imported.png`
-- [ ] `metasploitable2-settings.png`
-- [ ] `metasploitable2-login.png`
-- [ ] `vmware-hostonly-network.png`
-- [ ] `kali-network-config.png`
-- [ ] `metasploitable2-network-config.png`
-- [ ] `ping-test-success.png`
-- [ ] `network-topology-diagram.png`
-
-***
