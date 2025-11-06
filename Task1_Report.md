@@ -71,7 +71,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 5. **Save and Exit** (usually F10)
 6. **Restart your computer**
 
-**Screenshot Reference:** `screenshots/bios-virtualization-enabled.png`
+![Image](https://github.com/user-attachments/assets/a88e8a7c-50f4-419f-8345-3535cce6ac08)
 
 ***
 
@@ -89,10 +89,10 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 3. **Accept the terms and conditions**[6]
 
 4. The installer file (approximately 600-700 MB) will download as:
-   - **Windows**: `VMware-workstation-full-xx.x.x-xxxxxxx.exe`
-   - **Linux**: `VMware-Workstation-Full-xx.x.x-xxxxxxx.bundle`
+   - **Windows**: `VMware-workstation-full-17.6.0-24238078.exe`
+   - **Linux**: `VMware-Workstation-Full-17.6.4-24832109.x86_64.bundle`
 
-**Screenshot Reference:** `screenshots/vmware-download-page.png`
+![Image](https://github.com/user-attachments/assets/8e3b4a60-029b-48a7-beba-4a5665c15917)
 
 ***
 
@@ -144,7 +144,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
    - Click **Finish**
    - You may need to **restart your computer**
 
-**Screenshot Reference:** `screenshots/vmware-installation-complete.png`
+![Image](https://github.com/user-attachments/assets/91141ae0-3fa9-4556-8cd5-74be2058c71b)
 
 ***
 
@@ -161,8 +161,6 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 
 3. VMware Workstation Pro is now ready to use
 
-**Screenshot Reference:** `screenshots/vmware-first-launch.png`
-
 ***
 
 # Step 2: Install Kali Linux
@@ -177,8 +175,8 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 2. Select **"Installer Images"**
 
 3. Download the **64-bit Installer ISO**:
-   - File name: `kali-linux-202X.X-installer-amd64.iso`
-   - Size: Approximately 3-4 GB
+   - File name: `kali-linux-2025.3-installer-everything-amd64.iso`
+   - Size: Approximately 10-13 GB
 
 
 ### Create Kali Linux Virtual Machine
@@ -202,7 +200,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
    - Select the ISO file
    - Click **Next**
 
-**Screenshot Reference:** `screenshots/kali-vm-iso-selection.png`
+![Image](https://github.com/user-attachments/assets/8c6b27c2-5a06-4cc9-a158-4aa4b9888df8)
 
 6. **Guest Operating System:**
    - Select **"Linux"**
@@ -212,9 +210,6 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
 7. **Virtual Machine Name and Location:**
    - Name: `Kali Linux 2025`
    - Location: Choose where to store VM files (default is fine)
-     ```
-     Default: C:\Users\[YourName]\Documents\Virtual Machines\Kali Linux 2025\
-     ```
    - Click **Next**
 
 8. **Processor Configuration:**
@@ -328,7 +323,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
     - Password: Your password
     - Press **Enter**
 
-**Screenshot Reference:** `screenshots/kali-desktop.png`
+![Image](https://github.com/user-attachments/assets/d2d41113-cb3a-490c-9cc9-37023cdea785)
 
 ***
 
