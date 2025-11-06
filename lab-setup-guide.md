@@ -120,6 +120,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
    - You may need to **restart your computer**
 
 ![Image](https://github.com/user-attachments/assets/44d73309-17a9-4313-a57b-0a243349848b)
+
 ***
 
 ### First Launch and License Activation
@@ -227,7 +228,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
     - Click **"Customize Hardware"** to make any final adjustments (optional)
     - Click **Finish**
 
-**Screenshot Reference:** `screenshots/kali-vm-created.png`
+<img width="496" height="527" alt="Image" src="https://github.com/user-attachments/assets/ce471571-d4f7-4334-bb40-43de1395bdfd" />
 
 ***
 
@@ -239,7 +240,7 @@ Before installing VMware, ensure hardware virtualization is enabled in your syst
    - Select **"Graphical Install"** (recommended)
    - Press **Enter**
 
-**Screenshot Reference:** `screenshots/kali-boot-menu.png`
+<img width="654" height="497" alt="Image" src="https://github.com/user-attachments/assets/4fd4b92f-4863-4e6c-b501-5106a1b9d048" />
 
 3. **Language Selection:**
    - Select your preferred language (e.g., **English**)
@@ -311,7 +312,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt dist-upgrade -y
 ```
 
-**Screenshot Reference:** `screenshots/kali-system-update.png`
+<img width="1919" height="1023" alt="Image" src="https://github.com/user-attachments/assets/1f1c9892-eee4-4b62-a273-7a67b9c2fe5f" />
 
 ***
 
